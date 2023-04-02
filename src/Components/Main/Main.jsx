@@ -5,8 +5,8 @@ const Main = ({}) => {
     return ( 
         <section id = 'Main'>
         <div>
-            <CardContainer/>
             <SideBar/>
+            <CardContainer/>
         </div>
 
         </section>

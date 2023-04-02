@@ -1,0 +1,7 @@
+.active{
+    background-color: rgb(96, 117, 165);
+}
+
+.collection:hover{
+    cursor: pointer;
+}

@@ -5,6 +5,7 @@ import Collection from '../Collection/Collection';
 
 const SideBar = ({}) => {
     const [collectionsDescription, setCollectionsDescription] = useState([])
+    const [activeCollectionId, setActiveCollectionID] = useState(0)
 
     async function fetchAllCollectionsDescriptions(){
         const response = await axios.get('http://127.0.0.1:8000/api/collections/')
@@ -15,8 +16,8 @@ const SideBar = ({}) => {
         fetchAllCollectionsDescriptions()
     }, []);
 
-    const CollectionList = collectionsDescription.map((collection) => <Collection collection={collection
-    }/>)
+    const CollectionList = collectionsDescription.map((collection) => 
+    <Collection collection={collection} activeCollectionId={activeCollectionId} setActiveCollectionID={setActiveCollectionID}/>)
     return ( 
         <div>
             <h4>

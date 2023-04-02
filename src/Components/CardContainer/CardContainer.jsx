@@ -34,7 +34,7 @@ const CardContainer = ({selectedCollectionId}) => {
 
   return (
     <section id="cards">
-      <div>1/10</div>
+      <div>{index+1}/{cards.length}</div>
       <div>
         <button onClick={{handlePrev}}>PREV</button>
         <Card card={activeCard} />

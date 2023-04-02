@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 const CardContainer = ({selectedCollectionId}) => {
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
+  const activeCard = cards[index]
 
   async function fetchCardsForCollection(){
     const response = await axios.get(`http://127.0.0.1:8000/api/collections/${selectedCollectionId}/cards/`);
@@ -21,7 +22,7 @@ const CardContainer = ({selectedCollectionId}) => {
       <div>1/10</div>
       <div>
         <button>PREV</button>
-        <Card />
+        <Card card={activeCard} />
         <button>NEXT</button>
       </div>
     </section>

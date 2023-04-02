@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
 
-const CardContainer = ({}) => {
+const CardContainer = ({selectedCollectionId}) => {
+  const [cards, setCards] = useState([]);
+  const [index, setIndex] = useState(0);
 
   async function fetchCardsForCollection(){
-    const [cards, setCards] = useState([])
-    const response = await axios.get('http://127.0.0.1:8000/api/collections/1/cards/');
+    const response = await axios.get(`http://127.0.0.1:8000/api/collections/${selectedCollectionId}/cards/`);
     setCards(response.data);
   }
 
   useEffect(() => {
-    fetchCardsForCollection()
-  }, []
+    fetchCardsForCollection();
+  }, [selectedCollectionId]
   ); 
+
   return (
     <section id="cards">
       <div>1/10</div>

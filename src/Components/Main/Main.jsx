@@ -1,21 +1,22 @@
-import React from 'react';
-import CardContainer from '../CardContainer/CardContainer'
-import SideBar from '../SideBar/SideBar';
+import React, { useState } from 'react';
+import CardContainer from "../CardContainer/CardContainer";
+import SideBar from "../SideBar/SideBar";
 const Main = ({}) => {
-    const [activeCollectionId, setActiveCollectionID] = useState(0);
-    return ( 
-        <section id = 'Main'>
-        <div>
-            <SideBar/>
-            <CardContainer activeCollectionId={activeCollectionId} setActiveCollectionID={setActiveCollectionID} />
-        </div>
+  const [activeCollectionId, setActiveCollectionID] = useState(0);
+  return (
+    <section id="Main">
+      <div>
+        <SideBar
+          activeCollectionId={activeCollectionId}
+          setActiveCollectionID={setActiveCollectionID}
+        />
+        <CardContainer selectedCollectionId={activeCollectionId} />
+      </div>
+    </section>
+  );
+};
 
-        </section>
-     );
-}
- 
 export default Main;
-
 
 // import CardContainer from "../CardContainer/CardContainer";
 // import CardViewer from "../CardViewer/CardViewer";
@@ -25,9 +26,9 @@ export default Main;
 
 // const Main = ({}) => {
 //     return ( <div>
-//         <CollectionContainer/>       
+//         <CollectionContainer/>
 //         <CardContainer/>
 //     </div> );
 // }
- 
+
 // export default Main;

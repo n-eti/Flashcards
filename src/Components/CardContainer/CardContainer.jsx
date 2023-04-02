@@ -7,8 +7,13 @@ const CardContainer = ({}) => {
   async function fetchCardsForCollection(){
     const [cards, setCards] = useState([])
     const response = await axios.get('http://127.0.0.1:8000/api/collections/1/cards/');
-
+    setCards(response.data);
   }
+
+  useEffect(() => {
+    fetchCardsForCollection()
+  }, []
+  ); 
   return (
     <section id="cards">
       <div>1/10</div>

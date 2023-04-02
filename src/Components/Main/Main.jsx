@@ -2,11 +2,12 @@ import React from 'react';
 import CardContainer from '../CardContainer/CardContainer'
 import SideBar from '../SideBar/SideBar';
 const Main = ({}) => {
+    const [activeCollectionId, setActiveCollectionID] = useState(0);
     return ( 
         <section id = 'Main'>
         <div>
             <SideBar/>
-            <CardContainer/>
+            <CardContainer activeCollectionId={activeCollectionId} setActiveCollectionID={setActiveCollectionID} />
         </div>
 
         </section>

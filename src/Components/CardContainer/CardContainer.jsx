@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 const CardContainer = ({selectedCollectionId}) => {
   const [cards, setCards] = useState([]);
   const [index, setIndex] = useState(0);
+  
   const activeCard = cards[index];
 
   async function fetchCardsForCollection(){

@@ -7,7 +7,6 @@ const CollectionContainer = ({}) => {
 
     const getAllCollections = async () => {
       let response = await axios.get("http://127.0.0.1:8000/api/collections/");
-      console.log(response.data);
       setCollections(response.data);
     };
   
@@ -17,11 +16,11 @@ const CollectionContainer = ({}) => {
   
     return (
       <div>
-        <center>
-          {collections.map((el) => (
-            <Collection collection ={el} ></Collection>
+        
+          {collections.map((collection) => (
+            <Collection collection ={collection} ></Collection>
           ))}
-        </center>
+       
       </div>
     );
 }

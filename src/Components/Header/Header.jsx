@@ -1,6 +1,12 @@
+import React from 'react';
 const Header = ({}) => {
-return(
-<header>BRAND/LOGO</header>
-)};
-
+    return ( 
+        <header>
+            <h4>
+                Brand, Logo
+            </h4>
+        </header>
+     );
+}
+ 
 export default Header;

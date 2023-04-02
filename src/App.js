@@ -1,13 +1,17 @@
-import Header from './Components/Header/Header.jsx'
-import Main from './Components/Main/Main.jsx';
+import './App.css';
+import React from 'react';
+import Header from './Components/Header/Header.jsx';
+import Main from './Components/Main/Main';
 
-function App() {
-  return (
-    <div>
+const App = ({}) => {
+  return ( 
+    <section id='App'>
+      <div>
       <Header/>
       <Main/>
-    </div>
-  );
-}
-
+      </div>
+    </section>
+   );
+};
+ 
 export default App;

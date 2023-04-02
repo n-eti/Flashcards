@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Collection = (props) => {
-  return <div>{props.collection.title}</div>
+const Collection = (collection) => {
+
+  function handleClick(){
+    console.log(collection)
+  }
+  return <div onClick={handleClick} className="clickable hoverable">{collection.title}</div>
 };
 
 export default Collection;

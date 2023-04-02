@@ -15,20 +15,3 @@ const Card = ({ card }) => {
 };
 
 export default Card;
-
-// /{}/ const Card = (card) => {
-
-// <div>
-//   <htest
-//   </h2>
-//   <p>test</p>
-// </div>  //   return (
-//     <div>
-//       ;{card.Flutter}
-//       {card.CSS}
-//       {card.Pandas}
-//     </div>
-//   );
-// };
-
-// export default Card;

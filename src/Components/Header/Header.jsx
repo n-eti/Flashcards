@@ -1,9 +1,10 @@
 import React from 'react';
+import './Header.css';
 const Header = ({}) => {
     return ( 
-        <header>
+        <header class= 'header h4text '>
             <h4>
-                Brand, Logo
+                FLASHCARDS
             </h4>
         </header>
      );

@@ -11,12 +11,12 @@ const Collection = ({
     setActiveCollectionId(collection.id);
   }
 
-  let cardClass = "";
+  let cardClass = '';
 
-  if (collection.id === activeCollectionId) cardClass = "clickable active";
+  if (collection.id === activeCollectionId) cardClass = 'active';
 
   return (
-    <div class="clickable" className={cardClass} onClick={handleClick}>
+    <div class= 'active clickable' className={cardClass} onClick={handleClick}>
       <h3>{collection.title}</h3>
     </div>
   );

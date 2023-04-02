@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CardContainer from "../CardContainer/CardContainer";
-import SideBar from "../SideBar/SideBar";
+import SideBar from '../SideBar/SideBar';
+
 const Main = ({}) => {
   const [activeCollectionId, setActiveCollectionID] = useState(0);
   return (

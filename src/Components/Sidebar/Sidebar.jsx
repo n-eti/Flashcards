@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Card from '../Card/Card';
 import Collection from '../Collection/Collection';
-
+import '../Collection/Collection.css'
 const SideBar = ({activeCollectionId, setActiveCollectionID}) => {
     const [collectionsDescription, setCollectionsDescription] = useState([])
     

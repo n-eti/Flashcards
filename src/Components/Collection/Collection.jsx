@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Collection.css';
-
 const Collection = ({
   collection,
   activeCollectionId,
@@ -13,10 +12,10 @@ const Collection = ({
 
   let collectionClass = "";
 
-  if (collection.id === activeCollectionId) collectionClass = "active";
+  if (collection.id === activeCollectionId) collectionClass = 'active';
 
   return (
-    <div className={collectionClass} onClick={handleClick}>
+    <div class = 'clickable' className= {collectionClass} onClick={handleClick}>
       <h3>{collection.title}</h3>
     </div>
   );

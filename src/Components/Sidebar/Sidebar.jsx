@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-const SideBar = ({}) => {
-    const [sideDescription, setSideDescription] = useState([])
+import Card from '../Card/Card';
+import Collection from '../Collection/Collection';
 
-    async function fetchAllSideDescriptions(){
+const SideBar = ({}) => {
+    const [collectionsDescription, setCollectionsDescription] = useState([])
+
+    async function fetchAllCollectionsDescriptions(){
         const response = await axios.get('http://127.0.0.1:8000/api/collections/')
-        setSideDescription(response.data)
+        setCollectionsDescription(response.data)
     }
 
     useEffect(() => {
-        fetchAllSideDescriptions()
+        fetchAllCollectionsDescriptions()
     }, []);
 
-    console.log(sideDescription)
-  return (
-    <section id="sidebar">
-      <div>
-        <h4>SideBar</h4>
-      </div>
-    </section>
-  );
+    const CollectionList = collectionsDescription.map((collection) => <Collection collection={collection
+    }/>)
+    return ( 
+        <div>
+            <h4>
+                {CollectionList}
+            </h4>
+        </div>
+     );
 };
 
 export default SideBar;
